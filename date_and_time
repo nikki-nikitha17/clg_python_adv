@@ -1,0 +1,5 @@
+from datetime import date
+a = date(2005,2,10)
+b = date(2026,4,28)
+print("no of days lived:",(b-a))
+print("no of seconds:",(b-a).total_seconds()/3600)
