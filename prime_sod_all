@@ -1,0 +1,26 @@
+def prime(n):
+    if n<=1:
+                return False
+    for i in range(2,n):
+        # for j in range(i):
+            if n%i==0:
+                return False
+    return True
+# print(prime(3),prime(5),prime(8))
+
+def sod(n):
+    n_str=str(n)
+    return sum(int(i) for i in n_str)
+# print(sod(9879),sod(35))
+def every(n):
+    for i in range(3):
+        rem=n%10
+        n=n//10
+        if not prime(rem):
+            return False
+    return True
+            
+for i in range(100,1000):
+    if prime(i) and prime(sod(i)) and every(i):
+        print(i, end=" ")
+        
